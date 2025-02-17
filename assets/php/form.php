@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Send the email or save to a database, depending on your requirements
     // Example: Send email
-    $to = "sayalisdhavale@email.com";
+    $to = "saurabhghumnar@gmail.com";
     $subject = "Hire";
     $headers = "From: $email";
 

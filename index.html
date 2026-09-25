@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saurabh Ghumnar — Save File</title>
+<meta name="description" content="Load the save file of Saurabh Ghumnar, Data Analyst and Power BI Developer in Austin, TX: quests, a boss fight with the three-day month-end, a skill tree, loot and achievements.">
+<meta name="theme-color" content="#070A14">
+<link rel="preload" href="assets/fonts/press-start-2p-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/game.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Crect width='8' height='8' fill='%23070A14'/%3E%3Crect x='1' y='5' width='1' height='2' fill='%233DFF75'/%3E%3Crect x='3' y='3' width='1' height='4' fill='%23FFE45C'/%3E%3Crect x='5' y='1' width='1' height='6' fill='%23FF3DA6'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- title screen -->
+<div class="title" id="title" role="dialog" aria-label="Press start">
+  <div>
+    <svg class="sprite" id="titleSprite" viewBox="0 0 12 14" shape-rendering="crispEdges" aria-hidden="true"></svg>
+    <div class="logo">Saurabh<br>Ghumnar</div>
+    <div class="sub">A data analyst's save file<br>Power BI · Automation · AI</div>
+    <button class="start" id="startBtn">Press start</button>
+  </div>
+  <div class="coin">Insert coin · 1 credit = 1 conversation<br>Sound off by default · toggle in the HUD</div>
+</div>
+<div class="crt" aria-hidden="true"></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<!-- HUD -->
+<header class="hud">
+  <div class="wrap">
+    <a class="who" href="#char"><svg class="av" viewBox="0 0 12 14" shape-rendering="crispEdges" aria-hidden="true" id="hudSprite"></svg><span>SAURABH<small>LVL 4 ANALYST</small></span></a>
+    <div class="xp"><span>Completion</span><div class="bar"><i id="xpBar"></i></div><b id="xpPct">0%</b></div>
+    <div class="tr" title="Achievements"><svg viewBox="0 0 8 8" width="18" height="18" shape-rendering="crispEdges" aria-hidden="true"><rect x="1" y="0" width="6" height="1" fill="#FFE45C"/><rect x="1" y="1" width="6" height="3" fill="#FFE45C"/><rect x="0" y="1" width="1" height="2" fill="#FFE45C"/><rect x="7" y="1" width="1" height="2" fill="#FFE45C"/><rect x="2" y="4" width="4" height="1" fill="#9a8a2b"/><rect x="3" y="5" width="2" height="1" fill="#FFE45C"/><rect x="2" y="6" width="4" height="2" fill="#FFE45C"/></svg><span class="num" id="trCount">0</span><span>/12</span></div>
+    <nav>
+      <a href="#quests">Quests</a><a href="#boss">Boss</a><a href="#skills">Skills</a><a href="#map">Map</a><a href="#inventory">Loot</a><a href="#arcade">Arcade</a><a href="#trophies">Trophies</a><a href="#party">Party</a>
+    </nav>
+    <div class="ctl">
+      <button id="sndBtn" aria-pressed="false" aria-label="Toggle sound" title="Sound">SND</button>
+      <button id="crtBtn" aria-pressed="true" aria-label="Toggle CRT scanlines" title="CRT">CRT</button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="gmenu" aria-label="Menu">MENU</button>
+    </div>
+  </div>
+</header>
+<div class="gmenu" id="gmenu">
+  <a href="#char">Character</a><a href="#quests">Quests</a><a href="#boss">Boss fight</a><a href="#skills">Skill tree</a><a href="#map">Career map</a><a href="#inventory">Inventory</a><a href="#arcade">Arcade</a><a href="#trophies">Trophies</a><a href="#party">Join party</a><a href="Saurabh_Ghumnar_Resume.pdf" download data-resume>Download resume</a>
+</div>
+
+<!-- ================= CHARACTER ================= -->
+<section class="char" id="char" data-xp="char">
+  <div class="wrap">
+    <div>
+      <div class="p1"><i></i>Player 1 · Save slot 04 · Austin, TX</div>
+      <h1>Saurabh Ghumnar</h1>
+      <div class="class">Class: Data Analyst / Power BI Developer<br><span>Guild:</span> DwyerOmega, Commercial Excellence<br><span>Since:</span> Sep 2025 · <span>Total playtime:</span> 4+ years</div>
+      <p class="bio">Builds the eight Power BI reports 60+ leaders open every month, the automation that produces the month-end pack in 4 hours instead of 3 days, and the AI applications that take repetitive work off commercial teams. Explore the save file to reach 100% completion.</p>
+      <div class="cta">
+        <a class="pbtn g" href="#quests">Start quest</a>
+        <a class="pbtn ghost" href="Saurabh_Ghumnar_Resume.pdf" download data-resume>Resume (PDF)</a>
+        <a class="pbtn ghost" href="https://www.linkedin.com/in/saurabhghumnar12" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="panel c sheet" id="sheet">
+      <div class="head"><span>Character stats</span><b>Lvl 4</b></div>
+      <div class="stat" style="--sc:var(--g)"><span>Power BI</span><div class="bar"><i data-w="96"></i></div><span class="v">96</span></div>
+      <div class="stat" style="--sc:var(--g)"><span>DAX</span><div class="bar"><i data-w="92"></i></div><span class="v">92</span></div>
+      <div class="stat" style="--sc:var(--c)"><span>SQL</span><div class="bar"><i data-w="90"></i></div><span class="v">90</span></div>
+      <div class="stat" style="--sc:var(--c)"><span>Python</span><div class="bar"><i data-w="88"></i></div><span class="v">88</span></div>
+      <div class="stat" style="--sc:var(--y)"><span>Automation</span><div class="bar"><i data-w="91"></i></div><span class="v">91</span></div>
+      <div class="stat" style="--sc:var(--m)"><span>AI apps</span><div class="bar"><i data-w="84"></i></div><span class="v">84</span></div>
+      <div class="abil">
+        <div><b>Passive</b><span>Single source of truth: every number ties to the semantic model.</span></div>
+        <div><b>Active</b><span>Month-end automation: 3 days of manual work collapses into 4 hours.</span></div>
+        <div><b>Ultimate</b><span>Claude skills and plugins: ~200 hours a month back to a five-analyst team.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUESTS ================= -->
+<section class="screen" id="quests" data-xp="quests">
+  <div class="wrap">
+    <div class="screen-head">
+      <div><span class="tag g">Main quest · World 1</span><h2>The reporting suite</h2></div>
+      <p>Eight Power BI reports, each a cleared level with its own audience and the question it answers. Filter by who plays it; open a level for the full card.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter levels">
+      <button class="chip" aria-pressed="true" data-f="all">All levels</button>
+      <button class="chip" aria-pressed="false" data-f="exec">Executive</button>
+      <button class="chip" aria-pressed="false" data-f="product">Product</button>
+      <button class="chip" aria-pressed="false" data-f="sales">Sales</button>
+      <button class="chip" aria-pressed="false" data-f="ecom">E-commerce</button>
+    </div>
+    <div class="levels" id="levels"></div>
+  </div>
+</section>
+
+<div class="modal" id="modal"><div class="panel g card" role="dialog" aria-modal="true" aria-labelledby="cTitle">
+  <button class="pbtn ghost sm cx" id="cClose">Close</button>
+  <div class="hd"><b id="cLvl"></b><span id="cStars"></span></div>
+  <h3 id="cTitle"></h3><p class="desc" id="cDesc"></p>
+  <dl><dt>Objective</dt><dd id="cQ"></dd><dt>Players</dt><dd id="cWho"></dd><dt>Loadout</dt><dd id="cHow"></dd></dl>
+  <div class="foot"><button class="pbtn ghost sm" id="cPrev">Prev level</button><button class="pbtn g sm" id="cNext">Next level</button></div>
+</div></div>
+
+<!-- ================= BOSS ================= -->
+<section class="screen boss" id="boss" data-xp="boss">
+  <div class="wrap">
+    <div class="screen-head">
+      <div><span class="tag m">Boss fight · World 1 final</span><h2>The Three-Day Month-End</h2></div>
+      <p>Every month it showed up with 72 hours of manual exporting, cleaning and pasting for three regions and eleven sub-regions. Here is how the pipeline takes it down.</p>
+    </div>
+    <div class="panel m arena" id="arena">
+      <div class="hpwrap">
+        <div class="bname"><span>Boss</span>The Three-Day Month-End <span id="bossState">Encounter</span></div>
+        <div class="hp" id="hp"><i></i><b id="hpTxt">72h / 72h</b></div>
+      </div>
+      <div class="moves" id="moves">
+        <div class="move"><span class="k">A</span><div><b>Pull from the model</b>Everything comes from the same SAP-fed semantic model the reports run on.</div><span class="dmg">-14h</span></div>
+        <div class="move"><span class="k">B</span><div><b>Run the DAX query set</b>Python executes every view for every region. No exports.</div><span class="dmg">-16h</span></div>
+        <div class="move"><span class="k">X</span><div><b>Reconciliation gates</b>Every total ties to the model or the run stops and says where.</div><span class="dmg">-8h</span></div>
+        <div class="move"><span class="k">Y</span><div><b>Generate workbooks</b>Excel packs for AMER, EMEA, APAC and eleven sub-regions, by script.</div><span class="dmg">-12h</span></div>
+        <div class="move"><span class="k">L</span><div><b>Build decks and packs</b>PowerPoint from the MBR template; HTML packs with fact-checked narratives.</div><span class="dmg">-12h</span></div>
+        <div class="move"><span class="k">R</span><div><b>Publish to SharePoint</b>About 65 people get the pack. Time goes into reading it, not assembling it.</div><span class="dmg">-6h</span></div>
+      </div>
+      <div class="log" id="log" aria-live="polite"></div>
+      <div class="foot"><button class="pbtn m sm" id="fightBtn">Replay fight</button><span>Also defeated with the same combo: the monthly orders mapping (~1M rows, ~$100M), 3 days → 4 hours.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILL TREE ================= -->
+<section class="screen" id="skills" data-xp="skills">
+  <div class="wrap">
+    <div class="screen-head">
+      <div><span class="tag c">Skill tree</span><h2>Unlocked abilities</h2></div>
+      <p>Three branches from one root. Hover or tap a node for where it was unlocked. One node is still locked and queued next.</p>
+    </div>
+    <div class="panel c tree" id="tree"></div>
+    <div class="treeinfo"><span><i></i>Unlocked</span><span><i class="n"></i>Next unlock</span><span>Certifications held: CAPM (PMI) · Google AI Essentials · FinOps for Snowflake · Data Engineering Foundations</span></div>
+  </div>
+</section>
+
+<!-- ================= MAP ================= -->
+<section class="screen" id="map" data-xp="map">
+  <div class="wrap">
+    <div class="screen-head">
+      <div><span class="tag y">Career map</span><h2>Save points</h2></div>
+      <p>Three cities, four years, one thread. Select a save point to load it.</p>
+    </div>
+    <div class="map">
+      <div class="panel y world">
+        <svg viewBox="0 0 640 340" id="world" aria-label="Career map: Pune, Champaign, Austin"></svg>
+      </div>
+      <div class="panel y save" id="save"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INVENTORY ================= -->
+<section class="screen" id="inventory" data-xp="inventory">
+  <div class="wrap">
+    <div class="screen-head">
+      <div><span class="tag m">Inventory</span><h2>Loot collected</h2></div>
+      <p>Independent and graduate work, sorted by rarity. Using an item opens the full write-up.</p>
+    </div>
+    <div class="inv" id="inv">
+      <a class="panel item epic" href="https://github.com/saurabhghumnar/projects/blob/main/FinOps%20using%20Sigma%20and%20Snowflake.pdf" target="_blank" rel="noopener" data-loot><div class="img"><img src="images/snow.png" alt="Snowflake FinOps" data-fb="SF"><span class="rar">Epic</span></div><div class="bd"><h3>Snowflake FinOps blade</h3><p>Migrated a retail pipeline to Snowflake; rightsizing, auto-suspend, tiered cold data, showback dashboards.</p><span class="use">Use item →</span></div></a>
+      <a class="panel item rare" href="https://github.com/saurabhghumnar/projects/blob/main/Why%20Snowflake.pdf" target="_blank" rel="noopener" data-loot><div class="img"><img src="images/sigma.png" alt="FinOps in Sigma" data-fb="FS"><span class="rar">Rare</span></div><div class="bd"><h3>Sigma cost lens</h3><p>Warehouse diagnosis, auto-suspend tuning and real-time credit tracking.</p><span class="use">Use item →</span></div></a>
+      <a class="panel item rare" href="https://github.com/saurabhghumnar/projects/blob/main/Airbnb%20Insights%20with%20AWS%20Data%20Pipeline.pdf" target="_blank" rel="noopener" data-loot><div class="img"><img src="images/airbnb.png" alt="Airbnb on AWS" data-fb="AB"><span class="rar">Rare</span></div><div class="bd"><h3>AWS pipeline compass</h3><p>Lambda + Glue ingestion, Athena at scale, EMR models on Airbnb listings and reviews.</p><span class="use">Use item →</span></div></a>
+      <a class="panel item rare" href="https://public.tableau.com/app/profile/saurabh.ghumnar/vizzes" target="_blank" rel="noopener" data-loot><div class="img"><img src="images/tableau.jpg" alt="Tableau Public" data-fb="TB"><span class="rar">Rare</span></div><div class="bd"><h3>Tableau storyteller</h3><p>Public dashboards, including a competitor comparison that found where a store was losing on feedback.</p><span class="use">Use item →</span></div></a>
+      <a class="panel item epic" href="https://github.com/saurabhghumnar/projects/blob/main/Diagnosis%20Healthcare%20App.pdf" target="_blank" rel="noopener" data-loot><div class="img"><img src="images/app.jpg" alt="Healthcare app" data-fb="HC"><span class="rar">Epic</span></div><div class="bd"><h3>Triage app blueprint</h3><p>AI-assisted symptom triage product plan: feasibility, cost-benefit, risk matrix, HIPAA.</p><span class="use">Use item →</span></div></a>
+      <a class="panel item com" href="https://github.com/saurabhghumnar/projects/blob/main/MARKET%20BASKET%20ANALYSIS.pdf" target="_blank" rel="noopener" data-loot><div class="img"><img src="images/MBA.png" alt="Market basket analysis" data-fb="MB"><span class="rar">Common</span></div><div class="bd"><h3>Apriori basket</h3><p>Association-rule mining to find what sells together for e-commerce placement and promotions.</p><span class="use">Use item →</span></div></a>
+      <a class="panel item com" href="https://github.com/saurabhghumnar/projects/blob/main/Air%20Pollution%20Project.pdf" target="_blank" rel="noopener" data-loot><div class="img"><img src="images/air.jpeg" alt="Air quality analysis" data-fb="AQ"><span class="rar">Common</span></div><div class="bd"><h3>LA air-quality scanner</h3><p>Python modeling and sensitivity analysis of what drives pollution in Los Angeles.</p><span class="use">Use item →</span></div></a>
+      <a class="panel item com" href="https://github.com/saurabhghumnar/projects/blob/main/MarkeTechs%20Marketing%20Plan%20for%20JellO.pdf" target="_blank" rel="noopener" data-loot><div class="img"><img src="images/jello.png" alt="Jell-O marketing plan" data-fb="JO"><span class="rar">Common</span></div><div class="bd"><h3>Jell-O launch scroll</h3><p>Survey design, analysis and a launch strategy for a new Jell-O product line.</p><span class="use">Use item →</span></div></a>
+      <a class="panel item com" href="https://github.com/saurabhghumnar/projects/blob/main/Blackberry%20Downfall%20Analysed.pdf" target="_blank" rel="noopener" data-loot><div class="img"><img src="images/blackberry.png" alt="BlackBerry case" data-fb="BB"><span class="rar">Common</span></div><div class="bd"><h3>BlackBerry post-mortem</h3><p>Why the enterprise-only focus lost the market, and the two-phase strategy that could have saved it.</p><span class="use">Use item →</span></div></a>
+      <a class="panel item com" href="https://github.com/saurabhghumnar/projects/blob/main/Zomato%20Competitive%20Strategy.pdf" target="_blank" rel="noopener" data-loot><div class="img"><img src="images/zomato.png" alt="Zomato case" data-fb="ZO"><span class="rar">Common</span></div><div class="bd"><h3>Zomato strategy map</h3><p>Porter's forces and value-chain analysis of Zomato's IPO position.</p><span class="use">Use item →</span></div></a>
+      <a class="panel item com" href="https://github.com/saurabhghumnar/projects/blob/main/Disruptive%20Innovation.pdf" target="_blank" rel="noopener" data-loot><div class="img"><img src="images/dropbox.png" alt="Dropbox case" data-fb="DB"><span class="rar">Common</span></div><div class="bd"><h3>Dropbox disruption codex</h3><p>How Dropbox reset cloud-storage expectations, through disruptive-innovation theory.</p><span class="use">Use item →</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ARCADE ================= -->
+<section class="screen" id="arcade" data-xp="arcade">
+  <div class="wrap">
+    <div class="screen-head">
+      <div><span class="tag g">Arcade · bonus stage</span><h2>Reconcile Rush</h2></div>
+      <p>Thirty seconds. Catch the numbers that tie to the model, dodge the ones that don't, grab the golden budget lines. Mouse, touch or arrow keys.</p>
+    </div>
+    <div class="panel g game">
+      <div class="bar"><span>Score <b class="sc" id="gScore">0</b></span><span>Time <b class="tm" id="gTime">30</b></span><span>Best <b class="hi" id="gBest">0</b></span></div>
+      <div class="stage">
+        <canvas id="gc" width="960" height="420" aria-label="Reconcile Rush mini-game"></canvas>
+        <div class="ov" id="gOv"><div><h3 id="gTitle">Reconcile Rush</h3><p id="gMsg">Catch green numbers (+10). Avoid red untied numbers (-15). Gold budget lines are worth +30. Score 500 to unlock an achievement.</p><button class="pbtn g" id="gStart">Start</button></div></div>
+      </div>
+      <div class="legend"><span><i style="background:var(--g)"></i>Tied number +10</span><span><i style="background:var(--r)"></i>Untied number -15</span><span><i style="background:var(--y)"></i>Budget line +30</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TROPHIES ================= -->
+<section class="screen" id="trophies" data-xp="trophies">
+  <div class="wrap">
+    <div class="screen-head">
+      <div><span class="tag y">Achievements</span><h2>Trophy room</h2></div>
+      <p>Some unlock by exploring, some by playing. Two are secret.</p>
+    </div>
+    <div class="trophies" id="trophyGrid"></div>
+  </div>
+</section>
+
+<!-- ================= PARTY ================= -->
+<section class="screen" id="party" data-xp="party">
+  <div class="wrap">
+    <div class="screen-head">
+      <div><span class="tag c">Multiplayer</span><h2>Join party</h2></div>
+      <p>Analytics, automation, AI, or a role where the three meet. Based in Austin, Texas. Replies within a day.</p>
+    </div>
+    <div class="party">
+      <div class="panel c">
+        <h3>Direct connect</h3>
+        <p>Pick a channel. Email is the fastest.</p>
+        <div class="links">
+          <a href="mailto:saurabhghumnar@gmail.com">saurabhghumnar@gmail.com<small>Email</small></a>
+          <a href="https://www.linkedin.com/in/saurabhghumnar12" target="_blank" rel="noopener">linkedin.com/in/saurabhghumnar12<small>LinkedIn</small></a>
+          <a href="https://github.com/saurabhghumnar" target="_blank" rel="noopener">github.com/saurabhghumnar<small>GitHub</small></a>
+          <a href="https://calendly.com/saurabh1213-sg" target="_blank" rel="noopener">Book a 20-minute call<small>Calendly</small></a>
+        </div>
+      </div>
+      <div class="panel c">
+        <h3>Send invite</h3>
+        <form class="form" id="contactForm" action="https://formspree.io/f/movjkbyk" method="POST">
+          <div class="row"><input type="text" name="name" placeholder="Your name" required aria-label="Your name"><input type="email" name="email" placeholder="Your email" required aria-label="Your email"></div>
+          <input type="text" name="subject" placeholder="Subject" required aria-label="Subject">
+          <textarea name="message" placeholder="Your message" required aria-label="Message"></textarea>
+          <div><button class="pbtn g" type="submit">Send invite</button></div>
+          <div class="status" id="formStatus" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Saurabh Ghumnar · Austin, TX · No cookies, no tracking, just a save file.</span><span><a href="#char">Back to start</a></span></div></footer>
+
+<script src="assets/js/game.js"></script>
+</body>
+</html>
